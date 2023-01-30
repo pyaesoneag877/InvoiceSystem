@@ -24,5 +24,10 @@ namespace InvoiceSystem.Report
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void linkLblCancel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

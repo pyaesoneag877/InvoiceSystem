@@ -277,7 +277,6 @@ namespace InvoiceSystem
         {
             frm_customer frm_cus = new frm_customer();
             frm_cus.Show();
-            this.Hide();
         }
     }
 }

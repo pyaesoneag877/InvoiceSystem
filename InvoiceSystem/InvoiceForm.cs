@@ -638,7 +638,6 @@ namespace InvoiceSystem
         {
             frm_invoice frmInvoice = new frm_invoice();
             frmInvoice.Show();
-            this.Hide();
         }
     }
 }

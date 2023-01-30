@@ -30,18 +30,25 @@ namespace InvoiceSystem.Report
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.invoiceViewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.invoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.invoice = new InvoiceSystem.Report.invoice();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.InvoiceViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.InvoiceViewTableAdapter = new InvoiceSystem.Report.invoiceTableAdapters.InvoiceViewTableAdapter();
-            this.invoiceViewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.linkLblCancel = new System.Windows.Forms.LinkLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceViewBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceViewBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invoiceViewBindingSource1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // invoiceViewBindingSource1
+            // 
+            this.invoiceViewBindingSource1.DataMember = "InvoiceView";
+            this.invoiceViewBindingSource1.DataSource = this.invoiceBindingSource;
             // 
             // invoiceBindingSource
             // 
@@ -55,14 +62,14 @@ namespace InvoiceSystem.Report
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DS_invoice";
-            reportDataSource1.Value = this.invoiceViewBindingSource1;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "DS_invoice";
+            reportDataSource2.Value = this.invoiceViewBindingSource1;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "InvoiceSystem.Report.invoice.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(72, 87);
+            this.reportViewer1.Location = new System.Drawing.Point(26, 65);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(634, 246);
+            this.reportViewer1.Size = new System.Drawing.Size(797, 246);
             this.reportViewer1.TabIndex = 0;
             // 
             // InvoiceViewBindingSource
@@ -74,26 +81,49 @@ namespace InvoiceSystem.Report
             // 
             this.InvoiceViewTableAdapter.ClearBeforeFill = true;
             // 
-            // invoiceViewBindingSource1
+            // label11
             // 
-            this.invoiceViewBindingSource1.DataMember = "InvoiceView";
-            this.invoiceViewBindingSource1.DataSource = this.invoiceBindingSource;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(21, 25);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(171, 25);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "Invoice System";
+            // 
+            // linkLblCancel
+            // 
+            this.linkLblCancel.AutoSize = true;
+            this.linkLblCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLblCancel.LinkColor = System.Drawing.Color.Black;
+            this.linkLblCancel.Location = new System.Drawing.Point(773, 327);
+            this.linkLblCancel.Name = "linkLblCancel";
+            this.linkLblCancel.Size = new System.Drawing.Size(50, 16);
+            this.linkLblCancel.TabIndex = 31;
+            this.linkLblCancel.TabStop = true;
+            this.linkLblCancel.Text = "Cancel";
+            this.linkLblCancel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblCancel_LinkClicked);
             // 
             // frm_invoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.SaddleBrown;
+            this.ClientSize = new System.Drawing.Size(855, 363);
+            this.Controls.Add(this.linkLblCancel);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frm_invoice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_invoice";
             this.Load += new System.EventHandler(this.frm_invoice_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceViewBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceViewBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invoiceViewBindingSource1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -105,5 +135,7 @@ namespace InvoiceSystem.Report
         private invoiceTableAdapters.InvoiceViewTableAdapter InvoiceViewTableAdapter;
         private System.Windows.Forms.BindingSource invoiceBindingSource;
         private System.Windows.Forms.BindingSource invoiceViewBindingSource1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.LinkLabel linkLblCancel;
     }
 }

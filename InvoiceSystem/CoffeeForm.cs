@@ -112,7 +112,6 @@ namespace InvoiceSystem
         {
             frm_coffee from = new frm_coffee();
             from.Show();
-            this.Hide();
         }
 
         private CoffeeView GetSelectedRow(DevExpress.XtraGrid.Views.Grid.GridView view)

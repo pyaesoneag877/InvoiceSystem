@@ -50,7 +50,7 @@ namespace InvoiceSystem
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(101, 75);
+            this.label1.Location = new System.Drawing.Point(49, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 13);
             this.label1.TabIndex = 0;
@@ -60,7 +60,7 @@ namespace InvoiceSystem
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(101, 116);
+            this.label2.Location = new System.Drawing.Point(49, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 1;
@@ -99,10 +99,10 @@ namespace InvoiceSystem
             // 
             // gridControlCoffee
             // 
-            this.gridControlCoffee.Location = new System.Drawing.Point(90, 195);
+            this.gridControlCoffee.Location = new System.Drawing.Point(24, 195);
             this.gridControlCoffee.MainView = this.gridViewCoffee;
             this.gridControlCoffee.Name = "gridControlCoffee";
-            this.gridControlCoffee.Size = new System.Drawing.Size(288, 130);
+            this.gridControlCoffee.Size = new System.Drawing.Size(412, 130);
             this.gridControlCoffee.TabIndex = 5;
             this.gridControlCoffee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewCoffee});
@@ -148,7 +148,7 @@ namespace InvoiceSystem
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(292, 30);
+            this.linkLabel1.Location = new System.Drawing.Point(394, 30);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(42, 13);
             this.linkLabel1.TabIndex = 6;
@@ -161,7 +161,7 @@ namespace InvoiceSystem
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(85, 21);
+            this.label11.Location = new System.Drawing.Point(15, 21);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(171, 25);
             this.label11.TabIndex = 29;
@@ -172,7 +172,7 @@ namespace InvoiceSystem
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.ForeColor = System.Drawing.SystemColors.Info;
-            this.button1.Location = new System.Drawing.Point(104, 151);
+            this.button1.Location = new System.Drawing.Point(52, 151);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 27);
             this.button1.TabIndex = 4;

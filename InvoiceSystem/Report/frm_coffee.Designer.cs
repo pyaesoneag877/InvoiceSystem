@@ -30,34 +30,41 @@ namespace InvoiceSystem.Report
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.coffeeViewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.coffee = new InvoiceSystem.Report.coffee();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.CoffeeViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CoffeeViewTableAdapter = new InvoiceSystem.Report.coffeeTableAdapters.CoffeeViewTableAdapter();
-            this.coffeeViewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.linkLblCancel = new System.Windows.Forms.LinkLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.coffeeViewBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coffee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CoffeeViewBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coffeeViewBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // coffeeViewBindingSource1
             // 
-            reportDataSource1.Name = "DS_coffee";
-            reportDataSource1.Value = this.coffeeViewBindingSource1;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "InvoiceSystem.Report.coffee.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(26, 58);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(399, 293);
-            this.reportViewer1.TabIndex = 0;
+            this.coffeeViewBindingSource1.DataMember = "CoffeeView";
+            this.coffeeViewBindingSource1.DataSource = this.coffee;
             // 
             // coffee
             // 
             this.coffee.DataSetName = "coffee";
             this.coffee.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reportViewer1
+            // 
+            reportDataSource3.Name = "DS_coffee";
+            reportDataSource3.Value = this.coffeeViewBindingSource1;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "InvoiceSystem.Report.coffee.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(26, 58);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(548, 258);
+            this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // CoffeeViewBindingSource
             // 
@@ -68,35 +75,46 @@ namespace InvoiceSystem.Report
             // 
             this.CoffeeViewTableAdapter.ClearBeforeFill = true;
             // 
-            // coffeeViewBindingSource1
+            // label11
             // 
-            this.coffeeViewBindingSource1.DataMember = "CoffeeView";
-            this.coffeeViewBindingSource1.DataSource = this.coffee;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(12, 18);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(171, 25);
+            this.label11.TabIndex = 32;
+            this.label11.Text = "Invoice System";
             // 
-            // label1
+            // linkLblCancel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Coffee Report";
+            this.linkLblCancel.AutoSize = true;
+            this.linkLblCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLblCancel.LinkColor = System.Drawing.Color.Black;
+            this.linkLblCancel.Location = new System.Drawing.Point(524, 335);
+            this.linkLblCancel.Name = "linkLblCancel";
+            this.linkLblCancel.Size = new System.Drawing.Size(50, 16);
+            this.linkLblCancel.TabIndex = 33;
+            this.linkLblCancel.TabStop = true;
+            this.linkLblCancel.Text = "Cancel";
+            this.linkLblCancel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblCancel_LinkClicked);
             // 
             // frm_coffee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 372);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.SaddleBrown;
+            this.ClientSize = new System.Drawing.Size(603, 372);
+            this.Controls.Add(this.linkLblCancel);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frm_coffee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.coffeeViewBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coffee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CoffeeViewBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coffeeViewBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,6 +127,7 @@ namespace InvoiceSystem.Report
         private coffee coffee;
         private coffeeTableAdapters.CoffeeViewTableAdapter CoffeeViewTableAdapter;
         private System.Windows.Forms.BindingSource coffeeViewBindingSource1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.LinkLabel linkLblCancel;
     }
 }

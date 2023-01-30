@@ -364,12 +364,12 @@ namespace InvoiceSystem
             // 
             this.linklblReport.AutoSize = true;
             this.linklblReport.LinkColor = System.Drawing.Color.Black;
-            this.linklblReport.Location = new System.Drawing.Point(400, 289);
+            this.linklblReport.Location = new System.Drawing.Point(406, 498);
             this.linklblReport.Name = "linklblReport";
-            this.linklblReport.Size = new System.Drawing.Size(39, 13);
+            this.linklblReport.Size = new System.Drawing.Size(45, 13);
             this.linklblReport.TabIndex = 22;
             this.linklblReport.TabStop = true;
-            this.linklblReport.Text = "Report";
+            this.linklblReport.Text = "Report?";
             this.linklblReport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblReport_LinkClicked);
             // 
             // Customer
@@ -377,7 +377,7 @@ namespace InvoiceSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SaddleBrown;
-            this.ClientSize = new System.Drawing.Size(459, 497);
+            this.ClientSize = new System.Drawing.Size(459, 518);
             this.Controls.Add(this.linklblReport);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.linkGotoCoffee);
