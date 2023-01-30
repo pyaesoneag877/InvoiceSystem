@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="coffee" targetNamespace="http://tempuri.org/coffee.xsd" xmlns:mstns="http://tempuri.org/coffee.xsd" xmlns="http://tempuri.org/coffee.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="InvoiceSystemConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="InvoiceSystemConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.InvoiceSystem.Properties.Settings.GlobalReference.Default.InvoiceSystemConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CoffeeViewTableAdapter" GeneratorDataComponentClassName="CoffeeViewTableAdapter" Name="CoffeeView" UserDataComponentName="CoffeeViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="InvoiceSystemConnectionString (Settings)" DbObjectName="InvoiceSystem.dbo.CoffeeView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CoffeeTypeId, CoffeeTypeName, Price, Active FROM dbo.CoffeeView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CoffeeTypeId" DataSetColumn="CoffeeTypeId" />
+              <Mapping SourceColumn="CoffeeTypeName" DataSetColumn="CoffeeTypeName" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+              <Mapping SourceColumn="Active" DataSetColumn="Active" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="coffee" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="coffee" msprop:Generator_UserDSName="coffee">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CoffeeView" msprop:Generator_TableClassName="CoffeeViewDataTable" msprop:Generator_TableVarName="tableCoffeeView" msprop:Generator_TablePropName="CoffeeView" msprop:Generator_RowDeletingName="CoffeeViewRowDeleting" msprop:Generator_RowChangingName="CoffeeViewRowChanging" msprop:Generator_RowEvHandlerName="CoffeeViewRowChangeEventHandler" msprop:Generator_RowDeletedName="CoffeeViewRowDeleted" msprop:Generator_UserTableName="CoffeeView" msprop:Generator_RowChangedName="CoffeeViewRowChanged" msprop:Generator_RowEvArgName="CoffeeViewRowChangeEvent" msprop:Generator_RowClassName="CoffeeViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CoffeeTypeId" msprop:Generator_ColumnVarNameInTable="columnCoffeeTypeId" msprop:Generator_ColumnPropNameInRow="CoffeeTypeId" msprop:Generator_ColumnPropNameInTable="CoffeeTypeIdColumn" msprop:Generator_UserColumnName="CoffeeTypeId">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CoffeeTypeName" msprop:Generator_ColumnVarNameInTable="columnCoffeeTypeName" msprop:Generator_ColumnPropNameInRow="CoffeeTypeName" msprop:Generator_ColumnPropNameInTable="CoffeeTypeNameColumn" msprop:Generator_UserColumnName="CoffeeTypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Active" msprop:Generator_ColumnVarNameInTable="columnActive" msprop:Generator_ColumnPropNameInRow="Active" msprop:Generator_ColumnPropNameInTable="ActiveColumn" msprop:Generator_UserColumnName="Active" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CoffeeView" />
+      <xs:field xpath="mstns:CoffeeTypeId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

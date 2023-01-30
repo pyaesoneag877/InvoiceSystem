@@ -65,6 +65,7 @@ namespace InvoiceSystem
             this.Price = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Discount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BalanceAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.InvoiceDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.InvoiceStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Remark = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -108,7 +109,7 @@ namespace InvoiceSystem
             this.label21 = new System.Windows.Forms.Label();
             this.txtBalance = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.BalanceAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.linkLblReport = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlItem)).BeginInit();
@@ -473,6 +474,17 @@ namespace InvoiceSystem
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "TotalAmount", "{0}")});
             this.TotalAmount.Visible = true;
             this.TotalAmount.VisibleIndex = 2;
+            // 
+            // BalanceAmount
+            // 
+            this.BalanceAmount.Caption = "BalanceAmount";
+            this.BalanceAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.BalanceAmount.FieldName = "Balance";
+            this.BalanceAmount.Name = "BalanceAmount";
+            this.BalanceAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "Balance", "{0}")});
+            this.BalanceAmount.Visible = true;
+            this.BalanceAmount.VisibleIndex = 7;
             // 
             // InvoiceDate
             // 
@@ -915,16 +927,18 @@ namespace InvoiceSystem
             this.label22.TabIndex = 59;
             this.label22.Text = "Balance";
             // 
-            // BalanceAmount
+            // linkLblReport
             // 
-            this.BalanceAmount.Caption = "BalanceAmount";
-            this.BalanceAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.BalanceAmount.FieldName = "Balance";
-            this.BalanceAmount.Name = "BalanceAmount";
-            this.BalanceAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "Balance", "{0}")});
-            this.BalanceAmount.Visible = true;
-            this.BalanceAmount.VisibleIndex = 7;
+            this.linkLblReport.AutoSize = true;
+            this.linkLblReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLblReport.LinkColor = System.Drawing.Color.Black;
+            this.linkLblReport.Location = new System.Drawing.Point(332, 303);
+            this.linkLblReport.Name = "linkLblReport";
+            this.linkLblReport.Size = new System.Drawing.Size(51, 15);
+            this.linkLblReport.TabIndex = 60;
+            this.linkLblReport.TabStop = true;
+            this.linkLblReport.Text = "Report?";
+            this.linkLblReport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblReport_LinkClicked);
             // 
             // InvoiceForm
             // 
@@ -932,6 +946,7 @@ namespace InvoiceSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SaddleBrown;
             this.ClientSize = new System.Drawing.Size(1063, 511);
+            this.Controls.Add(this.linkLblReport);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.txtBalance);
             this.Controls.Add(this.label21);
@@ -1083,5 +1098,6 @@ namespace InvoiceSystem
         private System.Windows.Forms.TextBox txtBalance;
         private System.Windows.Forms.Label label22;
         private DevExpress.XtraGrid.Columns.GridColumn BalanceAmount;
+        private System.Windows.Forms.LinkLabel linkLblReport;
     }
 }

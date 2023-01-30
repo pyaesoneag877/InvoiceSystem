@@ -41,6 +41,7 @@ namespace InvoiceSystem
             this.Price = new DevExpress.XtraGrid.Columns.GridColumn();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label11 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlCoffee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCoffee)).BeginInit();
             this.SuspendLayout();
@@ -166,6 +167,19 @@ namespace InvoiceSystem
             this.label11.TabIndex = 29;
             this.label11.Text = "Invoice System";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.ForeColor = System.Drawing.SystemColors.Info;
+            this.button1.Location = new System.Drawing.Point(104, 151);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 27);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Report";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CoffeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,6 +189,7 @@ namespace InvoiceSystem
             this.Controls.Add(this.label11);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.gridControlCoffee);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtCoffeeName);
@@ -206,5 +221,6 @@ namespace InvoiceSystem
         private DevExpress.XtraGrid.Columns.GridColumn Price;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button1;
     }
 }

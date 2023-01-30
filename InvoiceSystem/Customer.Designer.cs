@@ -57,6 +57,7 @@ namespace InvoiceSystem
             this.txtCustomerId = new System.Windows.Forms.TextBox();
             this.linkGotoCoffee = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
+            this.linklblReport = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCustomer)).BeginInit();
             this.SuspendLayout();
@@ -197,10 +198,10 @@ namespace InvoiceSystem
             // 
             // gridControlCustomer
             // 
-            this.gridControlCustomer.Location = new System.Drawing.Point(15, 284);
+            this.gridControlCustomer.Location = new System.Drawing.Point(15, 305);
             this.gridControlCustomer.MainView = this.gridViewCustomer;
             this.gridControlCustomer.Name = "gridControlCustomer";
-            this.gridControlCustomer.Size = new System.Drawing.Size(430, 200);
+            this.gridControlCustomer.Size = new System.Drawing.Size(430, 179);
             this.gridControlCustomer.TabIndex = 15;
             this.gridControlCustomer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewCustomer});
@@ -359,12 +360,25 @@ namespace InvoiceSystem
             this.label7.TabIndex = 21;
             this.label7.Text = "Invoice System";
             // 
+            // linklblReport
+            // 
+            this.linklblReport.AutoSize = true;
+            this.linklblReport.LinkColor = System.Drawing.Color.Black;
+            this.linklblReport.Location = new System.Drawing.Point(400, 289);
+            this.linklblReport.Name = "linklblReport";
+            this.linklblReport.Size = new System.Drawing.Size(39, 13);
+            this.linklblReport.TabIndex = 22;
+            this.linklblReport.TabStop = true;
+            this.linklblReport.Text = "Report";
+            this.linklblReport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblReport_LinkClicked);
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SaddleBrown;
             this.ClientSize = new System.Drawing.Size(459, 497);
+            this.Controls.Add(this.linklblReport);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.linkGotoCoffee);
             this.Controls.Add(this.txtCustomerId);
@@ -427,5 +441,6 @@ namespace InvoiceSystem
         private System.Windows.Forms.TextBox txtCustomerId;
         private System.Windows.Forms.LinkLabel linkGotoCoffee;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.LinkLabel linklblReport;
     }
 }

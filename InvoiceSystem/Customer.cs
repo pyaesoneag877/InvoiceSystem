@@ -9,6 +9,7 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.BandedGrid;
 using System.Data.SqlClient;
 using System.Data;
+using InvoiceSystem.Report;
 
 namespace InvoiceSystem
 {
@@ -270,6 +271,13 @@ namespace InvoiceSystem
             {
                 btnDelete.PerformClick();
             }
+        }
+
+        private void linklblReport_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frm_customer frm_cus = new frm_customer();
+            frm_cus.Show();
+            this.Hide();
         }
     }
 }

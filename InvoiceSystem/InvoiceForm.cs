@@ -9,6 +9,7 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.BandedGrid;
 using System.Data.SqlClient;
 using System.Data;
+using InvoiceSystem.Report;
 
 namespace InvoiceSystem
 {
@@ -631,6 +632,13 @@ namespace InvoiceSystem
             {
                 MessageBox.Show("Balance Error", "Suggest", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void linkLblReport_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frm_invoice frmInvoice = new frm_invoice();
+            frmInvoice.Show();
+            this.Hide();
         }
     }
 }

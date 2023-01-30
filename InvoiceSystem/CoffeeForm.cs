@@ -9,6 +9,7 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.BandedGrid;
 using System.Data.SqlClient;
 using System.Data;
+using InvoiceSystem.Report;
 
 namespace InvoiceSystem
 {
@@ -105,6 +106,13 @@ namespace InvoiceSystem
             {
                 btnCreate.PerformClick();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frm_coffee from = new frm_coffee();
+            from.Show();
+            this.Hide();
         }
 
         private CoffeeView GetSelectedRow(DevExpress.XtraGrid.Views.Grid.GridView view)
