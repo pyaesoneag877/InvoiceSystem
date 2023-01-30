@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Invoice">
+  <DataContextMoniker Name="/InvoiceDataContext" />
+  <nestedChildShapes>
+    <classShape Id="46e98967-4730-4959-b9ef-629c91c0f27d" isExpanded="false" absoluteBounds="0.5, 1.375, 2, 0.45">
+      <DataClassMoniker Name="/InvoiceDataContext/UserView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29890ee2-5131-45f1-927d-d79d5703bfda" absoluteBounds="0.51500000000000012, 1.835, 1.9700000000000002, 0.92155454307794571" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8abbadfe-aef0-43e8-8cd9-fe11778b6b41" isExpanded="false" absoluteBounds="0.5, 0.625, 2, 0.45">
+      <DataClassMoniker Name="/InvoiceDataContext/UserTb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34c2e9ea-c308-44ad-96d1-774ee69e6bdb" absoluteBounds="0.51500000000000012, 1.085, 1.9700000000000002, 1.1350249970952668" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e5452c40-a12b-42c7-a51a-885518eb1f5a" isExpanded="false" absoluteBounds="2.625, 0.625, 2, 0.45">
+      <DataClassMoniker Name="/InvoiceDataContext/CustomerTb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f121fdd6-948c-4f8a-b13b-6a86864922ca" absoluteBounds="2.64, 1.085, 1.9700000000000002, 1.9889068131645522" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5fb3d503-c1cc-4400-be2e-6eaf69aff3ef" isExpanded="false" absoluteBounds="2.625, 1.375, 2, 0.45">
+      <DataClassMoniker Name="/InvoiceDataContext/CustomerView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4bf536a2-23bc-46da-9cf6-4e35ae2a3e1f" absoluteBounds="2.64, 1.835, 1.9700000000000002, 1.9889068131645522" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="59b4a47c-8f83-474d-9339-00e620876bf2" isExpanded="false" absoluteBounds="0.5, 2.75, 2, 0.45">
+      <DataClassMoniker Name="/InvoiceDataContext/CoffeeView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="36c8faf7-e065-45fc-a4e8-da9b37d24b5e" absoluteBounds="0.51499999999999968, 3.21, 1.9700000000000002, 1.1350249970952668" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="26c49e45-1534-40ab-ac98-09bc06d58432" isExpanded="false" absoluteBounds="0.5, 2.125, 2, 0.45">
+      <DataClassMoniker Name="/InvoiceDataContext/Coffee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2e2ea797-8fdc-47c5-bb25-08f5f33fe04b" absoluteBounds="0.51499999999999968, 2.585, 1.9700000000000002, 1.1350249970952668" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="753b98b5-7a7d-4020-9105-ea7c026b7181" isExpanded="false" absoluteBounds="4.75, 0.625, 2, 0.45">
+      <DataClassMoniker Name="/InvoiceDataContext/ItemTb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="51387b65-b274-4dfb-a580-b09b4e8f52ab" absoluteBounds="4.765, 1.085, 1.9700000000000002, 2.2023772671818733" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f8d91772-a706-4b97-ba44-ab629d12bd54" isExpanded="false" absoluteBounds="4.75, 1.375, 2, 0.45">
+      <DataClassMoniker Name="/InvoiceDataContext/ItemView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8c4d081-5bd1-44ff-9bdf-4f9a7803858a" absoluteBounds="4.765, 1.835, 1.9700000000000002, 2.8427886292338371" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="19e7b7e3-cea0-406c-ad87-1a4392365fd5" isExpanded="false" absoluteBounds="2.625, 2.125, 2, 0.45">
+      <DataClassMoniker Name="/InvoiceDataContext/Invoice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb4573df-070d-4961-a48d-158842b3175e" absoluteBounds="2.64, 2.585, 1.9700000000000002, 3.0562590832511582" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb037ac5-2d88-47ca-b627-e70582272032" isExpanded="false" absoluteBounds="2.625, 2.75, 2, 0.45">
+      <DataClassMoniker Name="/InvoiceDataContext/InvoiceView" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b8e86013-229d-4c6f-974e-cfc5d972efb6" absoluteBounds="2.64, 3.21, 1.9700000000000002, 3.4831999912858009" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
