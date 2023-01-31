@@ -62,6 +62,9 @@ namespace InvoiceSystem.Report
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             reportDataSource2.Name = "DS_invoice";
             reportDataSource2.Value = this.invoiceViewBindingSource1;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
@@ -94,15 +97,19 @@ namespace InvoiceSystem.Report
             // 
             // linkLblCancel
             // 
+            this.linkLblCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLblCancel.AutoSize = true;
             this.linkLblCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLblCancel.LinkColor = System.Drawing.Color.Black;
-            this.linkLblCancel.Location = new System.Drawing.Point(773, 327);
+            this.linkLblCancel.Location = new System.Drawing.Point(793, 328);
             this.linkLblCancel.Name = "linkLblCancel";
             this.linkLblCancel.Size = new System.Drawing.Size(50, 16);
             this.linkLblCancel.TabIndex = 31;
             this.linkLblCancel.TabStop = true;
             this.linkLblCancel.Text = "Cancel";
+            this.linkLblCancel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.linkLblCancel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblCancel_LinkClicked);
             // 
             // frm_invoice
@@ -117,6 +124,7 @@ namespace InvoiceSystem.Report
             this.Name = "frm_invoice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_invoice";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_invoice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.invoiceViewBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceBindingSource)).EndInit();

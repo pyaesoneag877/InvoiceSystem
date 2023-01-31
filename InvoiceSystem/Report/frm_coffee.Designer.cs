@@ -30,7 +30,7 @@ namespace InvoiceSystem.Report
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.coffeeViewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.coffee = new InvoiceSystem.Report.coffee();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -55,9 +55,12 @@ namespace InvoiceSystem.Report
             // 
             // reportViewer1
             // 
-            reportDataSource3.Name = "DS_coffee";
-            reportDataSource3.Value = this.coffeeViewBindingSource1;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            reportDataSource1.Name = "DS_coffee";
+            reportDataSource1.Value = this.coffeeViewBindingSource1;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "InvoiceSystem.Report.coffee.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(26, 58);
             this.reportViewer1.Name = "reportViewer1";
@@ -91,7 +94,7 @@ namespace InvoiceSystem.Report
             this.linkLblCancel.AutoSize = true;
             this.linkLblCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLblCancel.LinkColor = System.Drawing.Color.Black;
-            this.linkLblCancel.Location = new System.Drawing.Point(524, 335);
+            this.linkLblCancel.Location = new System.Drawing.Point(524, 27);
             this.linkLblCancel.Name = "linkLblCancel";
             this.linkLblCancel.Size = new System.Drawing.Size(50, 16);
             this.linkLblCancel.TabIndex = 33;
@@ -111,6 +114,7 @@ namespace InvoiceSystem.Report
             this.Name = "frm_coffee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.coffeeViewBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coffee)).EndInit();

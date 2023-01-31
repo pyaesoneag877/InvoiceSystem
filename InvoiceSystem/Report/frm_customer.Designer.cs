@@ -30,7 +30,7 @@ namespace InvoiceSystem.Report
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.customerViewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.customerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.customer = new InvoiceSystem.Report.customer();
@@ -62,9 +62,12 @@ namespace InvoiceSystem.Report
             // 
             // reportViewer1
             // 
-            reportDataSource3.Name = "DS_customer";
-            reportDataSource3.Value = this.customerViewBindingSource1;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            reportDataSource2.Name = "DS_customer";
+            reportDataSource2.Value = this.customerViewBindingSource1;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "InvoiceSystem.Report.customer.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(40, 78);
             this.reportViewer1.Name = "reportViewer1";
@@ -95,10 +98,13 @@ namespace InvoiceSystem.Report
             // 
             // linkLblCancel
             // 
+            this.linkLblCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLblCancel.AutoSize = true;
             this.linkLblCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLblCancel.LinkColor = System.Drawing.Color.Black;
-            this.linkLblCancel.Location = new System.Drawing.Point(757, 339);
+            this.linkLblCancel.Location = new System.Drawing.Point(791, 350);
             this.linkLblCancel.Name = "linkLblCancel";
             this.linkLblCancel.Size = new System.Drawing.Size(50, 16);
             this.linkLblCancel.TabIndex = 32;
@@ -118,6 +124,7 @@ namespace InvoiceSystem.Report
             this.Name = "frm_customer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_customer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_customer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.customerViewBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).EndInit();

@@ -102,7 +102,7 @@ namespace InvoiceSystem
             this.gridControlCoffee.Location = new System.Drawing.Point(24, 195);
             this.gridControlCoffee.MainView = this.gridViewCoffee;
             this.gridControlCoffee.Name = "gridControlCoffee";
-            this.gridControlCoffee.Size = new System.Drawing.Size(412, 130);
+            this.gridControlCoffee.Size = new System.Drawing.Size(349, 130);
             this.gridControlCoffee.TabIndex = 5;
             this.gridControlCoffee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewCoffee});
@@ -148,7 +148,7 @@ namespace InvoiceSystem
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(394, 30);
+            this.linkLabel1.Location = new System.Drawing.Point(331, 30);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(42, 13);
             this.linkLabel1.TabIndex = 6;
@@ -185,7 +185,7 @@ namespace InvoiceSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SaddleBrown;
-            this.ClientSize = new System.Drawing.Size(466, 349);
+            this.ClientSize = new System.Drawing.Size(399, 349);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.gridControlCoffee);
