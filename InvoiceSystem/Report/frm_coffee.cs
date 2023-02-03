@@ -19,6 +19,8 @@ namespace InvoiceSystem.Report
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'coffee.SumDiscount' table. You can move, or remove it, as needed.
+            this.sumDiscountTableAdapter.Fill(this.coffee.SumDiscount);
             // TODO: This line of code loads data into the 'coffee.CoffeeView' table. You can move, or remove it, as needed.
             this.CoffeeViewTableAdapter.Fill(this.coffee.CoffeeView);
 

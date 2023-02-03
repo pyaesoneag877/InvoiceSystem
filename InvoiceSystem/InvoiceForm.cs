@@ -636,7 +636,7 @@ namespace InvoiceSystem
 
         private void linkLblReport_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frm_invoice frmInvoice = new frm_invoice();
+           Invoice_Detail frmInvoice = new Invoice_Detail();
             frmInvoice.Show();
         }
     }

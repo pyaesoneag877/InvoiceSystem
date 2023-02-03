@@ -188,4 +188,5 @@ C:\Users\DELL\source\repos\InvoiceSystem\InvoiceSystem\bin\Debug\ru\Microsoft.Sq
 C:\Users\DELL\source\repos\InvoiceSystem\InvoiceSystem\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\DELL\source\repos\InvoiceSystem\InvoiceSystem\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 C:\Users\DELL\source\repos\InvoiceSystem\InvoiceSystem\obj\Debug\InvoiceSystem.Report.frm_customer.resources
-C:\Users\DELL\source\repos\InvoiceSystem\InvoiceSystem\obj\Debug\InvoiceSystem.Report.frm_invoice.resources
+C:\Users\DELL\source\repos\InvoiceSystem\InvoiceSystem\obj\Debug\InvoiceSystem.Report.Form_Invoice.resources
+C:\Users\DELL\source\repos\InvoiceSystem\InvoiceSystem\obj\Debug\InvoiceSystem.Report.Invoice_Detail.resources

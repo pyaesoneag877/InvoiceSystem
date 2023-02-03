@@ -31,27 +31,21 @@ namespace InvoiceSystem.Report
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.coffeeViewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.coffee = new InvoiceSystem.Report.coffee();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.CoffeeViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.CoffeeViewTableAdapter = new InvoiceSystem.Report.coffeeTableAdapters.CoffeeViewTableAdapter();
             this.label11 = new System.Windows.Forms.Label();
             this.linkLblCancel = new System.Windows.Forms.LinkLabel();
+            this.coffeeViewBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.coffee = new InvoiceSystem.Report.coffee();
+            this.CoffeeViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CoffeeViewTableAdapter = new InvoiceSystem.Report.coffeeTableAdapters.CoffeeViewTableAdapter();
+            this.sumDiscountBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sumDiscountTableAdapter = new InvoiceSystem.Report.coffeeTableAdapters.SumDiscountTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.coffeeViewBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coffee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CoffeeViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sumDiscountBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // coffeeViewBindingSource1
-            // 
-            this.coffeeViewBindingSource1.DataMember = "CoffeeView";
-            this.coffeeViewBindingSource1.DataSource = this.coffee;
-            // 
-            // coffee
-            // 
-            this.coffee.DataSetName = "coffee";
-            this.coffee.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -60,7 +54,10 @@ namespace InvoiceSystem.Report
             | System.Windows.Forms.AnchorStyles.Right)));
             reportDataSource1.Name = "DS_coffee";
             reportDataSource1.Value = this.coffeeViewBindingSource1;
+            reportDataSource2.Name = "DS_Disc";
+            reportDataSource2.Value = this.sumDiscountBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "InvoiceSystem.Report.coffee.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(26, 58);
             this.reportViewer1.Name = "reportViewer1";
@@ -68,15 +65,6 @@ namespace InvoiceSystem.Report
             this.reportViewer1.Size = new System.Drawing.Size(548, 258);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
-            // 
-            // CoffeeViewBindingSource
-            // 
-            this.CoffeeViewBindingSource.DataMember = "CoffeeView";
-            this.CoffeeViewBindingSource.DataSource = this.coffee;
-            // 
-            // CoffeeViewTableAdapter
-            // 
-            this.CoffeeViewTableAdapter.ClearBeforeFill = true;
             // 
             // label11
             // 
@@ -91,16 +79,45 @@ namespace InvoiceSystem.Report
             // 
             // linkLblCancel
             // 
+            this.linkLblCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLblCancel.AutoSize = true;
             this.linkLblCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLblCancel.LinkColor = System.Drawing.Color.Black;
-            this.linkLblCancel.Location = new System.Drawing.Point(524, 27);
+            this.linkLblCancel.Location = new System.Drawing.Point(541, 335);
             this.linkLblCancel.Name = "linkLblCancel";
             this.linkLblCancel.Size = new System.Drawing.Size(50, 16);
             this.linkLblCancel.TabIndex = 33;
             this.linkLblCancel.TabStop = true;
             this.linkLblCancel.Text = "Cancel";
             this.linkLblCancel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblCancel_LinkClicked);
+            // 
+            // coffeeViewBindingSource1
+            // 
+            this.coffeeViewBindingSource1.DataMember = "CoffeeView";
+            this.coffeeViewBindingSource1.DataSource = this.coffee;
+            // 
+            // coffee
+            // 
+            this.coffee.DataSetName = "coffee";
+            this.coffee.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // CoffeeViewBindingSource
+            // 
+            this.CoffeeViewBindingSource.DataMember = "CoffeeView";
+            this.CoffeeViewBindingSource.DataSource = this.coffee;
+            // 
+            // CoffeeViewTableAdapter
+            // 
+            this.CoffeeViewTableAdapter.ClearBeforeFill = true;
+            // 
+            // sumDiscountBindingSource
+            // 
+            this.sumDiscountBindingSource.DataMember = "SumDiscount";
+            this.sumDiscountBindingSource.DataSource = this.coffee;
+            // 
+            // sumDiscountTableAdapter
+            // 
+            this.sumDiscountTableAdapter.ClearBeforeFill = true;
             // 
             // frm_coffee
             // 
@@ -119,6 +136,7 @@ namespace InvoiceSystem.Report
             ((System.ComponentModel.ISupportInitialize)(this.coffeeViewBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coffee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CoffeeViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sumDiscountBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,5 +151,7 @@ namespace InvoiceSystem.Report
         private System.Windows.Forms.BindingSource coffeeViewBindingSource1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.LinkLabel linkLblCancel;
+        private System.Windows.Forms.BindingSource sumDiscountBindingSource;
+        private coffeeTableAdapters.SumDiscountTableAdapter sumDiscountTableAdapter;
     }
 }

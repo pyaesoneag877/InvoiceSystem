@@ -106,6 +106,11 @@
     <Compile Include="InvoiceForm.Designer.cs">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="InvoiceSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceSystemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LINQ\Invoice.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -129,6 +134,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>customer.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Report\Form_Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Form_Invoice.Designer.cs">
+      <DependentUpon>Form_Invoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\frm_coffee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,16 +152,16 @@
     <Compile Include="Report\frm_customer.Designer.cs">
       <DependentUpon>frm_customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\frm_invoice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\frm_invoice.Designer.cs">
-      <DependentUpon>frm_invoice.cs</DependentUpon>
-    </Compile>
     <Compile Include="Report\invoice.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>invoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Invoice_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Invoice_Detail.Designer.cs">
+      <DependentUpon>Invoice_Detail.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CoffeeForm.resx">
       <DependentUpon>CoffeeForm.cs</DependentUpon>
@@ -163,16 +174,31 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\coffee.rdlc" />
     <EmbeddedResource Include="Report\customer.rdlc" />
+    <EmbeddedResource Include="Report\Form_Invoice.resx">
+      <DependentUpon>Form_Invoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\frm_coffee.resx">
       <DependentUpon>frm_coffee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\frm_customer.resx">
       <DependentUpon>frm_customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\frm_invoice.resx">
-      <DependentUpon>frm_invoice.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Report\invoice.rdlc" />
+    <EmbeddedResource Include="Report\Invoice_Detail.rdlc" />
+    <EmbeddedResource Include="Report\Invoice_Detail.resx">
+      <DependentUpon>Invoice_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="InvoiceSystemDataSet.xsc">
+      <DependentUpon>InvoiceSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InvoiceSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvoiceSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InvoiceSystemDataSet.xss">
+      <DependentUpon>InvoiceSystemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="LINQ\Invoice.dbml.layout">
       <DependentUpon>Invoice.dbml</DependentUpon>
     </None>
