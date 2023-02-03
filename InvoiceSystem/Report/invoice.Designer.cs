@@ -2355,13 +2355,14 @@ namespace InvoiceSystem.Report.invoiceTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@searchText", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@searchDateFrom", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@searchDateTo", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(invoice.Invoice_DetailDataTable dataTable, string searchText, global::System.Nullable<global::System.DateTime> searchDateFrom, global::System.Nullable<global::System.DateTime> searchDateTo) {
+        public virtual int Fill(invoice.Invoice_DetailDataTable dataTable, string searchText, global::System.Nullable<global::System.DateTime> searchDateFrom, global::System.Nullable<global::System.DateTime> searchDateTo, string status) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((searchText == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -2380,6 +2381,12 @@ namespace InvoiceSystem.Report.invoiceTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((status == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(status));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2392,7 +2399,7 @@ namespace InvoiceSystem.Report.invoiceTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual invoice.Invoice_DetailDataTable GetData(string searchText, global::System.Nullable<global::System.DateTime> searchDateFrom, global::System.Nullable<global::System.DateTime> searchDateTo) {
+        public virtual invoice.Invoice_DetailDataTable GetData(string searchText, global::System.Nullable<global::System.DateTime> searchDateFrom, global::System.Nullable<global::System.DateTime> searchDateTo, string status) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((searchText == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -2411,6 +2418,12 @@ namespace InvoiceSystem.Report.invoiceTableAdapters {
             }
             else {
                 this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((status == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(status));
             }
             invoice.Invoice_DetailDataTable dataTable = new invoice.Invoice_DetailDataTable();
             this.Adapter.Fill(dataTable);

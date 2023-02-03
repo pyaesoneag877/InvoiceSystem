@@ -30,9 +30,7 @@ namespace InvoiceSystem.Report
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.invoiceDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.invoice = new InvoiceSystem.Report.invoice();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.rpt_viewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tb_search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,32 +39,26 @@ namespace InvoiceSystem.Report
             this.label4 = new System.Windows.Forms.Label();
             this.dtp_From = new System.Windows.Forms.DateTimePicker();
             this.dtp_To = new System.Windows.Forms.DateTimePicker();
-            this.invoice_DetailTableAdapter = new InvoiceSystem.Report.invoiceTableAdapters.Invoice_DetailTableAdapter();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSearchName = new System.Windows.Forms.TextBox();
             this.linklblReport = new System.Windows.Forms.LinkLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.invoiceDetailBindingSource)).BeginInit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbo_Status = new System.Windows.Forms.ComboBox();
+            this.invoice = new InvoiceSystem.Report.invoice();
+            this.invoiceDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.invoice_DetailTableAdapter = new InvoiceSystem.Report.invoiceTableAdapters.Invoice_DetailTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.invoice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceDetailBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // invoiceDetailBindingSource
-            // 
-            this.invoiceDetailBindingSource.DataMember = "Invoice_Detail";
-            this.invoiceDetailBindingSource.DataSource = this.invoice;
-            // 
-            // invoice
-            // 
-            this.invoice.DataSetName = "invoice";
-            this.invoice.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rpt_viewer
             // 
             this.rpt_viewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource1.Name = "InvoiceDetail";
-            reportDataSource1.Value = this.invoiceDetailBindingSource;
-            this.rpt_viewer.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource6.Name = "Invoice_Detail";
+            reportDataSource6.Value = this.invoiceDetailBindingSource;
+            this.rpt_viewer.LocalReport.DataSources.Add(reportDataSource6);
             this.rpt_viewer.LocalReport.ReportEmbeddedResource = "InvoiceSystem.Report.Invoice_Detail.rdlc";
             this.rpt_viewer.Location = new System.Drawing.Point(13, 167);
             this.rpt_viewer.Name = "rpt_viewer";
@@ -138,7 +130,7 @@ namespace InvoiceSystem.Report
             // 
             this.dtp_From.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_From.CalendarMonthBackground = System.Drawing.SystemColors.InactiveBorder;
-            this.dtp_From.CustomFormat = "dd/MM/yyyy";
+            this.dtp_From.CustomFormat = "MM/dd/yyyy hh:mm:ss tt";
             this.dtp_From.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_From.Location = new System.Drawing.Point(669, 73);
             this.dtp_From.Name = "dtp_From";
@@ -150,7 +142,7 @@ namespace InvoiceSystem.Report
             // dtp_To
             // 
             this.dtp_To.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtp_To.CustomFormat = "dd/MM/yy";
+            this.dtp_To.CustomFormat = "MM/dd/yyyy hh:mm:ss tt";
             this.dtp_To.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_To.Location = new System.Drawing.Point(669, 114);
             this.dtp_To.Name = "dtp_To";
@@ -158,10 +150,6 @@ namespace InvoiceSystem.Report
             this.dtp_To.TabIndex = 9;
             this.dtp_To.Value = new System.DateTime(2023, 2, 3, 8, 46, 50, 0);
             this.dtp_To.ValueChanged += new System.EventHandler(this.dtp_To_ValueChanged);
-            // 
-            // invoice_DetailTableAdapter
-            // 
-            this.invoice_DetailTableAdapter.ClearBeforeFill = true;
             // 
             // label7
             // 
@@ -197,12 +185,50 @@ namespace InvoiceSystem.Report
             this.linklblReport.Text = "Cancel";
             this.linklblReport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblReport_LinkClicked);
             // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(201, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 13);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Search By Status";
+            // 
+            // cbo_Status
+            // 
+            this.cbo_Status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbo_Status.FormattingEnabled = true;
+            this.cbo_Status.Location = new System.Drawing.Point(204, 80);
+            this.cbo_Status.Name = "cbo_Status";
+            this.cbo_Status.Size = new System.Drawing.Size(179, 21);
+            this.cbo_Status.TabIndex = 26;
+            this.cbo_Status.SelectedIndexChanged += new System.EventHandler(this.cbo_Status_SelectedIndexChanged);
+            this.cbo_Status.TextChanged += new System.EventHandler(this.cbo_Status_TextChanged);
+            // 
+            // invoice
+            // 
+            this.invoice.DataSetName = "invoice";
+            this.invoice.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // invoiceDetailBindingSource
+            // 
+            this.invoiceDetailBindingSource.DataMember = "Invoice_Detail";
+            this.invoiceDetailBindingSource.DataSource = this.invoice;
+            // 
+            // invoice_DetailTableAdapter
+            // 
+            this.invoice_DetailTableAdapter.ClearBeforeFill = true;
+            // 
             // Invoice_Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SaddleBrown;
             this.ClientSize = new System.Drawing.Size(861, 444);
+            this.Controls.Add(this.cbo_Status);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.linklblReport);
             this.Controls.Add(this.txtSearchName);
             this.Controls.Add(this.label7);
@@ -218,8 +244,9 @@ namespace InvoiceSystem.Report
             this.Text = "Invoice_Detail";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Invoice_Detail_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.invoiceDetailBindingSource)).EndInit();
+            this.TextChanged += new System.EventHandler(this.Invoice_Detail_TextChanged);
             ((System.ComponentModel.ISupportInitialize)(this.invoice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoiceDetailBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,11 +262,13 @@ namespace InvoiceSystem.Report
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtp_From;
         private System.Windows.Forms.DateTimePicker dtp_To;
-        private System.Windows.Forms.BindingSource invoiceDetailBindingSource;
-        private invoice invoice;
-        private invoiceTableAdapters.Invoice_DetailTableAdapter invoice_DetailTableAdapter;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtSearchName;
         private System.Windows.Forms.LinkLabel linklblReport;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbo_Status;
+        private System.Windows.Forms.BindingSource invoiceDetailBindingSource;
+        private invoice invoice;
+        private invoiceTableAdapters.Invoice_DetailTableAdapter invoice_DetailTableAdapter;
     }
 }

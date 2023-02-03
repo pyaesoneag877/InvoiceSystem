@@ -75,7 +75,7 @@ namespace InvoiceSystem
                 invoice.Discount = Convert.ToInt32(txtDiscount.Text);
                 invoice.TotalAmount = Convert.ToInt32(txtTotalAmount.Text);
                 invoice.Balance = Convert.ToInt32(txtBalance.Text); ;
-                invoice.InvoiceDate = Convert.ToDateTime(dtpInvoiceDate.Text);
+                invoice.InvoiceDate = dtpInvoiceDate.Value;
                 invoice.Remark = rtxtRemark.Text;
                 
                 invoice.Active = true;
@@ -137,7 +137,7 @@ namespace InvoiceSystem
 
             cboInvoiceStatus.Text = cellvalue.InvoiceStatus;
 
-            if (cellvalue.InvoiceStatus=="Completed" || cellvalue.InvoiceStatus=="Cancelled")
+            if (cellvalue.InvoiceStatus == "Completed" || cellvalue.InvoiceStatus == "Cancelled")
             {
                 btnUpdate.Hide();
                 btnDelete.Hide();
@@ -179,7 +179,7 @@ namespace InvoiceSystem
             invoice.Discount = Convert.ToInt32(txtDiscount.Text);
             invoice.TotalAmount = Convert.ToInt32(txtTotalAmount.Text);
             invoice.Balance = Convert.ToInt32(txtBalance.Text);
-            invoice.InvoiceDate = Convert.ToDateTime(dtpInvoiceDate.Text);
+            invoice.InvoiceDate = dtpInvoiceDate.Value;
             invoice.Remark = rtxtRemark.Text;
 
             dc.SubmitChanges();

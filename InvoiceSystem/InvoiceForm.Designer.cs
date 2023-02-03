@@ -296,9 +296,11 @@ namespace InvoiceSystem
             // 
             this.dtpInvoiceDate.CalendarForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dtpInvoiceDate.CalendarMonthBackground = System.Drawing.Color.Black;
+            this.dtpInvoiceDate.CustomFormat = "dd/MM/yyyy hh:mm:ss tt";
+            this.dtpInvoiceDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpInvoiceDate.Location = new System.Drawing.Point(323, 75);
             this.dtpInvoiceDate.Name = "dtpInvoiceDate";
-            this.dtpInvoiceDate.Size = new System.Drawing.Size(121, 20);
+            this.dtpInvoiceDate.Size = new System.Drawing.Size(154, 20);
             this.dtpInvoiceDate.TabIndex = 18;
             // 
             // rtxtRemark

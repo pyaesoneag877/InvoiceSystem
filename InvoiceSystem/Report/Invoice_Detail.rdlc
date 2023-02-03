@@ -721,7 +721,7 @@
                               <Value>=Fields!InvoiceDate.Value</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>MMM d, yyyy</Format>
+                                <Format>g</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1317,10 +1317,10 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>InvoiceDetail</DataSetName>
+        <DataSetName>Invoice_Detail</DataSetName>
         <Top>0.78625in</Top>
         <Height>1.54167in</Height>
-        <Width>16.11459in</Width>
+        <Width>16.11458in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1447,7 +1447,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="InvoiceDetail">
+    <DataSet Name="Invoice_Detail">
       <Query>
         <DataSourceName>invoice</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
