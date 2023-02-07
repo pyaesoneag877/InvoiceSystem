@@ -32,9 +32,12 @@ namespace InvoiceSystem.Report
                 this.invoice.Invoice_Detail, txtSearchName.Text,
                 Convert.ToDateTime(dtp_From.Text),
                 Convert.ToDateTime(dtp_To.Text),
-                cbo_Status.Text);
+                cbo_Status.Items[cbo_Status.SelectedIndex].ToString()
+                //cbo_Status.Text
+            );
             this.rpt_viewer.RefreshReport();
         }
+        
         private void tb_search_TextChanged(object sender, EventArgs e)
         {
             load_list();
@@ -82,7 +85,7 @@ namespace InvoiceSystem.Report
 
         private void cbo_Status_SelectedIndexChanged(object sender, EventArgs e)
         {
-            load_list();
+            //load_list();
         }
 
         private void Invoice_Detail_TextChanged(object sender, EventArgs e)

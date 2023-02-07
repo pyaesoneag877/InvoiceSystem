@@ -57,11 +57,21 @@ namespace InvoiceSystem
         {
             var customer_name = cboCustomerName.Items[cboCustomerName.SelectedIndex].ToString();
             string customer_id = (from u in dc.CustomerTbs where u.CustomerName == customer_name select u.CustomerId).FirstOrDefault();
-
+           
             if (IsValid())
             {
                 Invoice invoice = new Invoice();
-                invoice.InvoiceId = Guid.NewGuid().ToString();
+                if (invoice_id==null)
+                {
+                    invoice.InvoiceId = Guid.NewGuid().ToString();
+                    invoice_id = invoice.InvoiceId;
+                    dc.Invoices.InsertOnSubmit(invoice);
+                }
+                else
+                {
+                    invoice = (from c in dc.Invoices where c.InvoiceId == invoice_id && c.Active == true select c).FirstOrDefault();
+                }
+               
                 invoice.InvoiceNo = txtInvoiceNo.Text;
 
                 //dropdown insert
@@ -79,7 +89,7 @@ namespace InvoiceSystem
                 invoice.Remark = rtxtRemark.Text;
                 
                 invoice.Active = true;
-                dc.Invoices.InsertOnSubmit(invoice);
+              
                 dc.SubmitChanges();
                 MessageBox.Show("New invoice is created", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

@@ -29,6 +29,12 @@ namespace InvoiceSystem
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CoffeeForm));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCoffeeName = new System.Windows.Forms.TextBox();
@@ -39,11 +45,14 @@ namespace InvoiceSystem
             this.CoffeeTypeId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CoffeeTypeName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Price = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Delete = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlCoffee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCoffee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -99,23 +108,32 @@ namespace InvoiceSystem
             // 
             // gridControlCoffee
             // 
-            this.gridControlCoffee.Location = new System.Drawing.Point(24, 195);
+            this.gridControlCoffee.Location = new System.Drawing.Point(12, 198);
             this.gridControlCoffee.MainView = this.gridViewCoffee;
             this.gridControlCoffee.Name = "gridControlCoffee";
-            this.gridControlCoffee.Size = new System.Drawing.Size(349, 130);
+            this.gridControlCoffee.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemButtonEdit1});
+            this.gridControlCoffee.Size = new System.Drawing.Size(361, 394);
             this.gridControlCoffee.TabIndex = 5;
+            this.gridControlCoffee.UseEmbeddedNavigator = true;
             this.gridControlCoffee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewCoffee});
+            this.gridControlCoffee.Click += new System.EventHandler(this.gridControlCoffee_Click);
             // 
             // gridViewCoffee
             // 
             this.gridViewCoffee.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.CoffeeTypeId,
             this.CoffeeTypeName,
-            this.Price});
+            this.Price,
+            this.Delete});
             this.gridViewCoffee.GridControl = this.gridControlCoffee;
             this.gridViewCoffee.Name = "gridViewCoffee";
+            this.gridViewCoffee.OptionsFind.AlwaysVisible = true;
+            this.gridViewCoffee.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            this.gridViewCoffee.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.gridViewCoffee_InitNewRow);
             this.gridViewCoffee.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridViewCoffee_KeyDown);
+            this.gridViewCoffee.DoubleClick += new System.EventHandler(this.gridViewCoffee_DoubleClick);
             // 
             // CoffeeTypeId
             // 
@@ -139,10 +157,29 @@ namespace InvoiceSystem
             this.Price.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.Price.FieldName = "Price";
             this.Price.Name = "Price";
+            this.Price.OptionsFilter.AllowFilter = false;
             this.Price.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "Price", "{0}")});
             this.Price.Visible = true;
             this.Price.VisibleIndex = 1;
+            // 
+            // Delete
+            // 
+            this.Delete.Caption = "Delete";
+            this.Delete.ColumnEdit = this.repositoryItemButtonEdit1;
+            this.Delete.Name = "Delete";
+            this.Delete.Visible = true;
+            this.Delete.VisibleIndex = 2;
+            // 
+            // repositoryItemButtonEdit1
+            // 
+            this.repositoryItemButtonEdit1.AutoHeight = false;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
+            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repositoryItemButtonEdit1.Click += new System.EventHandler(this.repositoryItemButtonEdit1_Click);
             // 
             // linkLabel1
             // 
@@ -185,16 +222,16 @@ namespace InvoiceSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SaddleBrown;
-            this.ClientSize = new System.Drawing.Size(399, 349);
+            this.ClientSize = new System.Drawing.Size(395, 604);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.gridControlCoffee);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtCoffeeName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.gridControlCoffee);
             this.Name = "CoffeeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Coffee";
@@ -202,6 +239,7 @@ namespace InvoiceSystem
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CoffeeForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlCoffee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCoffee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +260,7 @@ namespace InvoiceSystem
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button1;
+        private DevExpress.XtraGrid.Columns.GridColumn Delete;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
     }
 }
